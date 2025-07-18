@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Home{% endblock %}</title>
+        <link rel="stylesheet" href="{{url_for('auth.static', filename='styles/base.css')}}">
+        <link rel="stylesheet" href="{{url_for('auth.static', filename='styles/header.css')}}">
+        <link rel="stylesheet" href="{{url_for('auth.static', filename='styles/sign_up.css')}}">
+        <link rel="stylesheet" href="{{url_for('auth.static', filename='styles/fast_messages.css')}}">
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="left_section">
+                <a href="{{url_for('views.filmua')}}">
+                    <img class="icon-page" src="{{url_for('auth.static', filename='images/logo.png')}}">
+                </a>
+            </div>
+            <nav class="middle_section">
+                <ul class="category">
+                    <li>
+                        <a class="List" href=""><span>Serials</span></a>
+                    </li>
+                    <li>
+                        <a class="List" href=""><span>Films</span></a>
+                    </li>
+                    <li> 
+                        <a class="List" href=""><span>Cartoons</span></a>
+                    </li>
+                    <li>
+                        <a class="List" href=""><span>Anime</span></a>
+                    </li>
+                    <li>
+                        <a class="List" href=""><span>Dramas</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="right_section">
+                <div class="search-film-div">
+                    <input class="search-input" type="text" placeholder="Search">
+                    <button class="seach-film-button">
+                        <img class="search-icon" src="{{url_for('auth.static', filename='images/icons/search.svg')}}" >
+                    </button>
+                </div>
+                <div class="pusk-buttom">
+                    <a class="pusk" href="/another-page">
+                        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ca563f" class="size-6">
+                            <path  fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                          </svg>                          
+                    </a>
+                </div>
+                <div>
+                    <a class="link-letter" href=""><span>Top 100</span></a>
+                </div>
+                <div>
+                    <a class="link-letter" href="{{url_for('auth.login')}}"><Span>Login</Span></a>
+                </div>
+                <div>
+                    <a class="link-letter" href="{{ url_for('auth.sign_up') }}"><span>Sign Up</span></a>
+                </div>
+            </div>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                    {% for category, message in messages %}
+                        {% if category == 'error' %}
+                            <div class="custom-alert alert-error">
+                                <span>{{ message }}</span>
+                                <button class="close-btn" onclick="this.parentElement.style.display='none';">&times;</button>
+                            </div>
+                        {% else %}
+                            <div class="custom-alert alert-success">
+                                <span>{{ message }}</span>
+                                <button class="close-btn" onclick="this.parentElement.style.display='none';">&times;</button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+            {% endif %}
+        {% endwith %}                
+
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+
+    </body>
+</html>
