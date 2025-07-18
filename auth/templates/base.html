@@ -2,17 +2,17 @@
 <html>
     <head>
         <title>{% block title %}Home{% endblock %}</title>
-        <link rel="stylesheet" href="{{url_for('auth.static', filename='styles/base.css')}}">
-        <link rel="stylesheet" href="{{url_for('auth.static', filename='styles/header.css')}}">
-        <link rel="stylesheet" href="{{url_for('auth.static', filename='styles/sign_up.css')}}">
-        <link rel="stylesheet" href="{{url_for('auth.static', filename='styles/fast_messages.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles/base.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles/header.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles/sign_up.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles/fast_messages.css')}}">
 
     </head>
     <body>
         <div class="header">
             <div class="left_section">
-                <a href="{{url_for('views.filmua')}}">
-                    <img class="icon-page" src="{{url_for('auth.static', filename='images/logo.png')}}">
+                <a href="{{url_for('views.home')}}">
+                    <img class="icon-page" src="{{url_for('static', filename='images/logo.png')}}">
                 </a>
             </div>
             <nav class="middle_section">
@@ -39,7 +39,7 @@
                 <div class="search-film-div">
                     <input class="search-input" type="text" placeholder="Search">
                     <button class="seach-film-button">
-                        <img class="search-icon" src="{{url_for('auth.static', filename='images/icons/search.svg')}}" >
+                        <img class="search-icon" src="{{url_for('static', filename='images/icons/search.svg')}}" >
                     </button>
                 </div>
                 <div class="pusk-buttom">

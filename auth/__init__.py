@@ -20,7 +20,7 @@ def create_app():
 
     from .models import User, Note # Імпортуємо моделі бази даних 
 
-    create_app(app)
+    create_database(app)
 
     login_manager = LoginManager() # відповідає за менеджмент авторизації:Перевіряє, чи користувач залогінений.
     login_manager.login_view = 'auth.login' #  куди перенаправляти користувача, якщо він неавторизований.

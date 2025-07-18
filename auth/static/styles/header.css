@@ -1,0 +1,148 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(44, 40, 48, 0.774);
+    color: white;
+}
+
+.left_section {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.icon-page {
+    height: 60px;
+}
+
+.middle_section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.List {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 10px;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+
+.List:hover {
+    background-color: #ca563f;
+    border-radius: 5px;
+}
+
+.right_section {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    width: 555px;
+    margin-right: 20px;
+}
+
+.search-film-div {
+    display: flex;
+   
+}
+
+.search-input {
+    height: 34px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: white;
+    font-size: 14px;
+    padding-left: 12px;
+    vertical-align: top;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.seach-film-button {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    margin-left: -1px;
+    margin-right: 12px;
+    border-color: rgba(44, 40, 48, 0.774);
+    
+}
+
+.search-icon {
+    height: 25px;
+}
+
+
+
+.pusk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 50px;
+    transition: background-color 0.5s;
+}
+
+.pusk:hover {
+    background-color: #ca563f;
+}
+
+.pusk svg {
+    transition: fill 0.5s;
+}
+
+.pusk:hover svg {
+    fill: white;
+}
+
+.size-6 {
+    height: 25px;
+    width: 25px;
+}
+
+
+
+.link-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 65px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 0 10px;
+    transition: background-color 0.5s;
+}
+
+.link-letter:hover {
+    background-color: #ca563f;
+}
+
