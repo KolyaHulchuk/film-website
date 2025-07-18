@@ -22,6 +22,7 @@ def login():
                 flash("Incorrect password, try again.", category='error')
         else:
             flash("Email does not exist", category='error')
+
     return render_template("login.html", user=current_user)        
 
 
@@ -52,7 +53,7 @@ def sign_up():
         elif password1 != password2:
             flash('Password don\'t math.', category='error')
         elif len(password1) > 7:
-            flash("Password must be at least 8 characters" category='error')
+            flash("Password must be at least 8 characters", category='error')
         else:
             new_user = User(email=email, first_name=first_name, password=generate_password_hash(password1, method="pbkdf2:sha256"))
             db.session.add(new_user)
