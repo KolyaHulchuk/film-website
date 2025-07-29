@@ -1,7 +1,7 @@
 .header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 60px;
     position: fixed;
     top: 0;
@@ -9,12 +9,13 @@
     right: 0;
     background-color: rgba(44, 40, 48, 0.774);
     color: white;
+    padding: 0 20px;
+    z-index: 1000;
 }
 
 .left_section {
     display: flex;
     align-items: center;
-    margin-left: 30px;
 }
 
 .icon-page {
@@ -24,7 +25,8 @@
 .middle_section {
     display: flex;
     align-items: center;
-    flex-direction: row;
+    justify-content: center;
+    flex: 1;
     
 }
 
@@ -57,10 +59,8 @@
 
 .right_section {
     display: flex;
-    flex-shrink: 0;
     align-items: center;
-    width: 555px;
-    margin-right: 20px;
+    gap: 15px;
 }
 
 .search-film-div {
